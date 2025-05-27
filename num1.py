@@ -21,7 +21,7 @@ os.makedirs(results_dir, exist_ok=True)
 
 output_path = os.path.join(results_dir, 
 "function_results.xml") 
-xml_str = ET.tostring(root, encoding="utf-8", xml_declaration=True) 
+xml_str = ET.tostring(root, encoding="utf-8") 
 pretty_xml = minidom.parseString(xml_str).toprettyxml(indent="")
 
 with open(output_path, "w", encoding="utf-8") as f: 
